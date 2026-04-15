@@ -1,0 +1,10 @@
+.img {
+    height: 200px;
+    width: auto;
+    object-fit: cover;
+}
+.carousel-item img {
+    height: 400px;       /* same height for both */
+    width: 100%;         /* full width */
+    object-fit: cover;   /* crops nicely without stretching */
+}

@@ -1,0 +1,20 @@
+{% extends 'base.html'%}
+{% block title%} Marks page {%endblock%}
+{% block content%}
+<div class="container-fluid d-flex justify-content-center mt-4">
+<div class="card bg-dark text-center p-4" style="width: 18rem";>
+    <form method="POST">
+        {%csrf_token%}
+        <input type="number" name="subject1" placeholder="Enter Subject1 Marks"><br><br>
+        <input type="number" name="subject2" placeholder="Enter Subject2 Marks"><br><br>
+        <input type="number" name="subject3" placeholder="Enter Subject3 Marks"><br><br>
+        <input type="number" name="subject4" placeholder="Enter Subject4 Marks"><br><br>
+        <input type="number" name="subject5" placeholder="Enter Subject5 Marks"><br><br>
+        <button type="submit" class="btn btn-secondary">Calculate</button>
+    </form>
+</div>
+</div>
+{% if total is not None %}
+    <h2>Total Marks: {{ total }}</h2>
+{% endif %}
+{%endblock%}
